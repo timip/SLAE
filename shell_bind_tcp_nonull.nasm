@@ -1,5 +1,5 @@
 ;
-; SLAE Assignment 1: Shell_Bind_TCP NoNull
+; SLAE Assignment 1: shell_bind_tcp_nonull
 ; Tim Ip (SLAE-1017)
 ;
 
