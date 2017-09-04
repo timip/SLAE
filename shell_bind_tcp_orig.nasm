@@ -1,3 +1,8 @@
+;
+; SLAE Assignment 1: shell_bind_tcp_orig
+; Tim Ip (SLAE-1017)
+;
+
 global _start
 
 section .text
