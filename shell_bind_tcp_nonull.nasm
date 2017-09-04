@@ -96,7 +96,7 @@ duploop:
 	mov al, 0x3f		; EAX=dup2=0x3f
 	int 0x80
 	inc ecx
-	cmp cl, 0x4		; If ecx==4, then zeroflag=0, else zeroflag=nonzero
+	cmp cl, 0x3		; If ecx==3, then zeroflag=0, else zeroflag=nonzero
 	jne duploop		; Loop if zeroflag!=0, then duploop
 
 
