@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 unsigned char shellcode[] = "\x90\x50\x90\x50\x90\x50\x90\x50" // Egg here
 "PUT YOUR SHELLCODE HERE";
 
