@@ -15,7 +15,7 @@ decoder:
 loop:
 	mov eax,[esi]
 	xor eax,[esi+4]
-	cmp eax, 0x90909090
+	cmp eax, 0x50905090
 	jz done
 	mov [esi],eax
 	add esi,0x4
