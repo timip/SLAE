@@ -14,7 +14,7 @@ def fbxencode(shellcode):
                 t = iter(iv)
                 iv = '\\x' + '\\x'.join(a+b for a,b in zip(t, t))
 
-        ivshellcode = iv + shellcode + '\\x90' * (4 - (len(shellcode)/4) % 4 + 4)
+        ivshellcode = iv + shellcode + '\\x90' * (4 - (len(shellcode)/4) % 4) + '\\x50\\x90\\x50\\x90'
         ivshellcode = ivshellcode.replace('\\x', '')
 
         blocks = []
